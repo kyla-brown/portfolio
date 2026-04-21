@@ -467,7 +467,6 @@ section {
 
 .designs-subheading,
 .comms-subheading {
-  text-align: center;
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-lg);
 }
@@ -1238,4 +1237,9 @@ section {
   .comms-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.designs-subheading,
+.comms-subheading {
+  max-width: var(--max-width);
 }
