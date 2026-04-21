@@ -465,8 +465,10 @@ section {
   max-width: 22ch;
 }
 
-.designs-subheading {
-  margin-top: var(--space-xl);
+.designs-subheading,
+.comms-subheading {
+  text-align: center;
+  margin-top: var(--space-2xl);
   margin-bottom: var(--space-lg);
 }
 
@@ -1215,5 +1217,25 @@ section {
   .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+
+/* ========================================
+   COMMUNICATIONS SECTION FIX
+   ======================================== */
+
+.comms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+
+  max-width: 700px;   /* controls how wide the two cards can spread */
+  margin: 0 auto;     /* centers the grid */
+}
+
+@media (max-width: 768px) {
+  .comms-grid {
+    grid-template-columns: 1fr;
   }
 }
