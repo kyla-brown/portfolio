@@ -1227,6 +1227,11 @@ section {
     font-size: clamp(2.6rem, 11vw, 4rem);
     margin-bottom: var(--space-sm);
     max-width: none;
+    white-space: nowrap;
+  }
+
+  .hero-name br {
+    display: none;
   }
 
   .hero-tagline {
