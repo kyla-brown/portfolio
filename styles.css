@@ -1283,3 +1283,48 @@ section {
   text-align: left;
   margin-left: 0;
 }
+
+@media (max-width: 768px) {
+
+  /* ===== HEADER FIX ===== */
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem; /* fixes uneven spacing */
+  }
+
+  /* ===== HERO FIX ===== */
+  .hero-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .hero-layout {
+    flex-direction: column;
+  }
+
+  /* Prevent image from dropping below buttons */
+  .hero-photo {
+    order: 0;
+  }
+
+  /* Fix text overflow */
+  .hero-name {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+}
