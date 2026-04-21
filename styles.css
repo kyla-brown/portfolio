@@ -12,12 +12,10 @@
   --color-accent: #9b8bbf;
   --color-accent-light: #d4c9f0;
   --color-accent-hover: #7a68a8;
-  /* Pop colors for visual energy */
   --color-pop: #9b8bbf;
   --color-pop-light: #ede8f8;
   --color-pop-2: #d94f3d;
   --color-pop-2-light: #fde8e6;
-  /* Skill card pastels */
   --skill-green: #e8f5e9;
   --skill-green-border: #a5d6a7;
   --skill-pink: #fce4ec;
@@ -210,6 +208,7 @@ section {
   width: 100%;
 }
 
+/* hamburger — hidden on desktop */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -231,9 +230,6 @@ section {
 
 /* ========================================
    HERO
-   ======================================== */
-/* ========================================
-   HERO LAYOUT (text + photo)
    ======================================== */
 #hero {
   min-height: 100vh;
@@ -360,7 +356,6 @@ section {
   transform: translateY(-1px);
 }
 
-/* Scroll indicator */
 .hero-scroll-indicator {
   position: absolute;
   bottom: var(--space-lg);
@@ -371,20 +366,9 @@ section {
 }
 
 @keyframes scrollBounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.4;
-  }
-
-  50% {
-    transform: translateY(6px);
-    opacity: 1;
-  }
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(6px); opacity: 1; }
 }
-
-
 
 /* ========================================
    ABOUT
@@ -591,12 +575,9 @@ section {
   gap: 8px;
 }
 
-
 /* ========================================
    DESIGNS GALLERY
    ======================================== */
-
-
 .designs-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -629,7 +610,6 @@ section {
   align-items: flex-end;
 }
 
-/* When a real image is set as background */
 .design-thumb img {
   width: 100%;
   height: 100%;
@@ -642,7 +622,6 @@ section {
   transform: scale(1.04);
 }
 
-/* Placeholder gradient shown before real images are added */
 .design-thumb--placeholder {
   background: linear-gradient(135deg,
       hsl(var(--thumb-hue, 270), 55%, 88%),
@@ -761,7 +740,6 @@ section {
   color: var(--color-text-primary);
 }
 
-/* Carousel */
 .modal-carousel {
   display: flex;
   align-items: center;
@@ -796,7 +774,6 @@ section {
   background: var(--color-bg);
 }
 
-/* Placeholder slide shown before real images */
 .carousel-slide-placeholder {
   width: 100%;
   height: 360px;
@@ -875,7 +852,6 @@ section {
 /* ========================================
    SKILLS
    ======================================== */
-
 #skills {
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
@@ -900,27 +876,10 @@ section {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Individual skill card colors */
-#skill-research {
-  background: var(--skill-green);
-  border-color: var(--skill-green-border);
-}
-
-#skill-marketing {
-  background: var(--skill-pink);
-  border-color: var(--skill-pink-border);
-}
-
-#skill-design {
-  background: var(--skill-orange);
-  border-color: var(--skill-orange-border);
-}
-
-#skill-journalism {
-  background: var(--skill-blue);
-  border-color: var(--skill-blue-border);
-}
-
+#skill-research  { background: var(--skill-green);  border-color: var(--skill-green-border); }
+#skill-marketing { background: var(--skill-pink);   border-color: var(--skill-pink-border); }
+#skill-design    { background: var(--skill-orange); border-color: var(--skill-orange-border); }
+#skill-journalism{ background: var(--skill-blue);   border-color: var(--skill-blue-border); }
 
 .skill-group h3 {
   font-size: 1rem;
@@ -1051,14 +1010,8 @@ section {
   transition: all var(--transition);
 }
 
-.contact-link:hover .contact-link-label {
-  color: var(--color-accent);
-}
-
-.contact-link:hover .contact-link-value {
-  color: var(--color-accent);
-  transform: translateX(4px);
-}
+.contact-link:hover .contact-link-label { color: var(--color-accent); }
+.contact-link:hover .contact-link-value { color: var(--color-accent); transform: translateX(4px); }
 
 .contact-link-label {
   font-size: 0.72rem;
@@ -1115,21 +1068,30 @@ section {
   transform: translateY(0);
 }
 
-/* Stagger siblings */
-.reveal:nth-child(2) {
-  transition-delay: 0.08s;
+.reveal:nth-child(2) { transition-delay: 0.08s; }
+.reveal:nth-child(3) { transition-delay: 0.16s; }
+.reveal:nth-child(4) { transition-delay: 0.24s; }
+
+/* ========================================
+   COMMUNICATIONS SECTION
+   ======================================== */
+.comms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.reveal:nth-child(3) {
-  transition-delay: 0.16s;
-}
-
-.reveal:nth-child(4) {
-  transition-delay: 0.24s;
+.designs-subheading,
+.comms-subheading {
+  max-width: var(--max-width);
+  text-align: left;
+  margin-left: 0;
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE — 1100px
    ======================================== */
 @media (max-width: 1100px) {
   .projects-grid {
@@ -1137,22 +1099,68 @@ section {
   }
 }
 
+/* ========================================
+   RESPONSIVE — 1024px
+   ======================================== */
 @media (max-width: 1024px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* ========================================
+   RESPONSIVE — 768px
+   ======================================== */
 @media (max-width: 768px) {
 
-  /* HERO: stack instead of side-by-side */
+  /* Show hamburger, hide horizontal nav */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    /* Stack vertically, hidden by default */
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background-color: rgba(250, 250, 248, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-md) 0;
+    /* Hidden state */
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.9rem var(--space-lg);
+    font-size: 0.85rem;
+  }
+
+  /* Hero: stack photo below text */
   .hero-layout {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-lg);
   }
 
-  /* Fix image cutting off */
   .hero-photo {
     width: 100%;
     max-width: 320px;
@@ -1166,48 +1174,24 @@ section {
     object-fit: contain;
   }
 
-  /* Optional: better text sizing on mobile */
   .hero-name {
     font-size: clamp(2.5rem, 10vw, 4rem);
   }
 
-  /* FIX: designs grid (this was missing) */
-  .designs-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Slightly tighter spacing for mobile */
-  section {
-    padding: var(--space-xl) 0;
-  }
-}
-
-  .nav-links.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
+  /* Grids */
+  .designs-grid        { grid-template-columns: 1fr; }
+  .about-grid          { grid-template-columns: 1fr; gap: var(--space-md); }
+  .projects-grid       { grid-template-columns: 1fr; }
+  .skills-grid         { grid-template-columns: 1fr; }
+  .comms-grid          { grid-template-columns: 1fr; }
 
   .about-detail-row {
     flex-direction: column;
     gap: var(--space-md);
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
+  section {
+    padding: var(--space-xl) 0;
   }
 
   .footer-inner {
@@ -1217,6 +1201,9 @@ section {
   }
 }
 
+/* ========================================
+   RESPONSIVE — 480px
+   ======================================== */
 @media (max-width: 480px) {
   .container {
     padding: 0 var(--space-sm);
@@ -1234,35 +1221,4 @@ section {
     width: 100%;
     justify-content: center;
   }
-}
-
-
-/* ========================================
-   COMMUNICATIONS SECTION FIX
-   ======================================== */
-
-.comms-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
-
-  max-width: 700px;   /* controls how wide the two cards can spread */
-  margin: 0 auto;     /* centers the grid */
-}
-
-@media (max-width: 768px) {
-  .comms-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.designs-subheading,
-.comms-subheading {
-  max-width: var(--max-width);
-}
-
-.designs-subheading,
-.comms-subheading {
-  text-align: left;
-  margin-left: 0;
 }
