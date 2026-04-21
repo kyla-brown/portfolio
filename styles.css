@@ -1243,3 +1243,9 @@ section {
 .comms-subheading {
   max-width: var(--max-width);
 }
+
+.designs-subheading,
+.comms-subheading {
+  text-align: left;
+  margin-left: 0;
+}
