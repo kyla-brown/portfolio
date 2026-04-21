@@ -1145,30 +1145,35 @@ section {
 
 @media (max-width: 768px) {
 
-  /* HERO: stack instead of side-by-side */
   .hero-layout {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-lg);
   }
 
-  /* Fix image cutting off */
-  .hero-photo {
+  /* Create a row just for name + image */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 320px;
-    height: auto;
-    align-self: center;
+  }
+
+  .hero-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+
+  .hero-photo {
+    width: 120px;
+    height: 140px;
+    flex-shrink: 0;
   }
 
   .hero-photo img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  /* Optional: better text sizing on mobile */
-  .hero-name {
-    font-size: clamp(2.5rem, 10vw, 4rem);
+    height: 100%;
+    object-fit: cover;
   }
 
   /* FIX: designs grid (this was missing) */
@@ -1215,6 +1220,18 @@ section {
     gap: var(--space-xs);
     text-align: center;
   }
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+  }
+
 }
 
 @media (max-width: 480px) {
