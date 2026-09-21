@@ -9,11 +9,11 @@
   --color-text-primary: #1a1916;
   --color-text-secondary: #6b6760;
   --color-text-muted: #9e9b96;
-  --color-accent: #7D2D35;
-  --color-accent-light: #B56A70;
-  --color-accent-hover: #63232A;
-  --color-pop: #7D2D35;
-  --color-pop-light: #F2E4E5;
+  --color-accent: #9b8bbf;
+  --color-accent-light: #d4c9f0;
+  --color-accent-hover: #7a68a8;
+  --color-pop: #9b8bbf;
+  --color-pop-light: #ede8f8;
   --color-pop-2: #d94f3d;
   --color-pop-2-light: #fde8e6;
   --skill-green: #e8f5e9;
@@ -631,7 +631,6 @@ section {
   transform: scale(1.04);
 }
 
-
 .design-thumb--placeholder {
   background: linear-gradient(135deg,
       hsl(var(--thumb-hue, 270), 55%, 88%),
@@ -784,7 +783,6 @@ section {
   background: var(--color-bg);
 }
 
-
 .carousel-slide-placeholder {
   width: 100%;
   height: 360px;
@@ -864,9 +862,9 @@ section {
    SKILLS
    ======================================== */
 #skills {
-  background: #F5E9EA;
-  border-top: 1px solid #D9B8BB;
-  border-bottom: 1px solid #D9B8BB;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .skills-grid {
@@ -887,12 +885,24 @@ section {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
-#skill-research,
-#skill-marketing,
-#skill-design,
+#skill-research {
+  background: var(--skill-green);
+  border-color: var(--skill-green-border);
+}
+
+#skill-marketing {
+  background: var(--skill-pink);
+  border-color: var(--skill-pink-border);
+}
+
+#skill-design {
+  background: var(--skill-orange);
+  border-color: var(--skill-orange-border);
+}
+
 #skill-journalism {
-  background: #FBF5F5;
-  border-color: #D9B8BB;
+  background: var(--skill-blue);
+  border-color: var(--skill-blue-border);
 }
 
 .skill-group h3 {
@@ -994,7 +1004,7 @@ section {
   background: transparent;
   color: var(--color-pop);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(125, 45, 53, 0.25);
+  box-shadow: 0 4px 16px rgba(98, 70, 234, 0.25);
 }
 
 .resume-btn-secondary {
@@ -1007,7 +1017,7 @@ section {
   background: var(--color-pop);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(125, 45, 53, 0.25);
+  box-shadow: 0 4px 16px rgba(98, 70, 234, 0.25);
 }
 
 .resume-btn-icon {
@@ -1191,7 +1201,7 @@ section {
     overflow: hidden;
     order: -1;
     border: 3px solid var(--color-accent-light);
-    box-shadow: 0 8px 32px rgba(125, 45, 53, 0.2);
+    box-shadow: 0 8px 32px rgba(155, 139, 191, 0.2);
   }
 
   .hero-photo img {
