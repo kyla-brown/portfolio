@@ -9,21 +9,11 @@
   --color-text-primary: #1a1916;
   --color-text-secondary: #6b6760;
   --color-text-muted: #9e9b96;
---color-accent: #7D2D35;
---color-accent-light: #B56A70;
---color-accent-hover: #63232A;
---color-pop: #7D2D35;
---color-pop-light: #F2E4E5;
-  --color-pop-2: #d94f3d;
-  --color-pop-2-light: #fde8e6;
-  --skill-green: #e8f5e9;
-  --skill-green-border: #a5d6a7;
-  --skill-pink: #fce4ec;
-  --skill-pink-border: #f48fb1;
-  --skill-orange: #fff3e0;
-  --skill-orange-border: #ffcc80;
-  --skill-blue: #e3f2fd;
-  --skill-blue-border: #90caf9;
+   --color-accent: #7D2D35;
+   --color-accent-light: #B56A70;
+   --color-accent-hover: #63232A;
+   --color-pop: #7D2D35;
+   --color-pop-light: #F2E4E5;
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
