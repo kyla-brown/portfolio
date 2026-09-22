@@ -482,7 +482,7 @@ section {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-pop), var(--color-accent));
+  background: linear-gradient(90deg, var(--color-pop), var(--color-accent-light));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-slow);
@@ -982,7 +982,7 @@ section {
   background: transparent;
   color: var(--color-pop);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(98, 70, 234, 0.25);
+  box-shadow: 0 4px 16px rgba(125, 45, 53, 0.25);
 }
 
 .resume-btn-secondary {
@@ -995,7 +995,7 @@ section {
   background: var(--color-pop);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(98, 70, 234, 0.25);
+  box-shadow: 0 4px 16px rgba(125, 45, 53, 0.25);
 }
 
 .resume-btn-icon {
@@ -1179,7 +1179,7 @@ section {
     overflow: hidden;
     order: -1;
     border: 3px solid var(--color-accent-light);
-    box-shadow: 0 8px 32px rgba(155, 139, 191, 0.2);
+    box-shadow: 0 8px 32px rgba(125, 45, 53, 0.2);
   }
 
   .hero-photo img {
